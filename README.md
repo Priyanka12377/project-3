@@ -1,61 +1,57 @@
 # Team Task Manager - Full Stack Interview Project
 
 ## Live Demo
-`[Railway URL after deployment]`
-
-## GitHub Repo
-`[repo link]`
+[Add Railway URL here after deployment]
 
 ## Features
-✅ Authentication (Signup/Login) with role-based access (Admin/Member)  
-✅ Project & Team Management  
-✅ Task Creation, Assignment, Status Tracking (pending/in-progress/completed)  
-✅ Dashboard with stats, recent tasks, overdue alerts  
-✅ REST APIs with validation, relationships  
-✅ Responsive UI (Tailwind CSS)  
+- ✅ Authentication (Signup/Login - Admin/Member RBAC)
+- ✅ Project & Team Management
+- ✅ Task CRUD + Status (pending/in-progress/completed) + Overdue
+- ✅ Dashboard with stats
+- ✅ REST APIs + MongoDB
+- ✅ Validations & Relationships
+- ✅ Responsive UI (Tailwind + React)
 
 ## Tech Stack
-- **Backend**: Node.js, Express, MongoDB, JWT, Mongoose  
-- **Frontend**: React, Vite, React Router, Axios, React Hook Form, Tailwind  
-- **Deployment**: Railway + MongoDB  
+```
+Backend: Node.js/Express + MongoDB + JWT
+Frontend: React + Vite + Tailwind CSS + Axios
+Deployment: Railway + MongoDB Atlas
+```
 
 ## Local Setup
-### 1. MongoDB (Required for local)
-- Download: https://www.mongodb.com/try/download/community  
-- Install & start service (`mongod`)  
-
-### 2. Backend
 ```bash
+# Backend
 cd backend
 npm install
-npm run dev  # port 3001
-```
+npm run dev  # localhost:3001
 
-### 3. Frontend
-```bash
+# Frontend  
 cd frontend
 npm install
-npm run dev  # port 3000
+npm run dev  # localhost:3000
 ```
 
-### Test
-- localhost:3000/login or /signup  
-- Admin signup → create projects/tasks  
-- Dashboard shows stats/overdue  
-
-## Railway Deployment (Production)
-1. GitHub repo push  
-2. railway.app → New Project → GitHub repo  
-3. Add MongoDB service  
-4. Set env vars: `JWT_SECRET=yoursecret`  
-5. Deploy! Live URL ready  
-
 ## API Endpoints
-- `POST /api/auth/signup` - Register  
-- `POST /api/auth/login` - Login  
-- `GET /api/projects` - List projects  
-- `POST /api/projects` - Create project  
-- `GET /api/tasks` - My tasks  
-- `PUT /api/tasks/:id` - Update status  
+```
+POST /api/auth/signup {name, email, password, role}
+POST /api/auth/login {email, password}
+GET /api/projects
+POST /api/projects
+POST /api/tasks
+PUT /api/tasks/:id
+```
 
-Perfect for interview demo!
+## Railway Deployment
+1. Root Directory: `./backend`
+2. Vars: `MONGODB_URI`, `JWT_SECRET`
+3. `Procfile`: `web: npm start`
+
+## Demo Video Script
+1. Signup Admin → Login
+2. Dashboard overview  
+3. Create project → Add team members
+4. Create/assign tasks → Update status
+5. Overdue tasks highlight
+
+**Fully Functional - Ready for Interview Submission!** 🎉
