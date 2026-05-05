@@ -10,7 +10,7 @@ const Signup = ({ setUser }) => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', data);
+      const res = await axios.post('http://localhost:3001/api/auth/signup', data);
       localStorage.setItem('token', res.data.token);
       setUser(res.data.user);
       navigate('/dashboard');

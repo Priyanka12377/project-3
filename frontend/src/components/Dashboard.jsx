@@ -12,10 +12,10 @@ const Dashboard = ({ user }) => {
       try {
         const token = localStorage.getItem('token');
         const [projectsRes, tasksRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/projects', {
+          axios.get('http://localhost:3001/api/projects', {
             headers: { Authorization: `Bearer ${token}` }
           }),
-          axios.get('http://localhost:5000/api/tasks', {
+          axios.get('http://localhost:3001/api/tasks', {
             headers: { Authorization: `Bearer ${token}` }
           })
         ]);
